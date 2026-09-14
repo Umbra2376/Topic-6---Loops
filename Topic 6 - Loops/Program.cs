@@ -17,9 +17,9 @@ namespace Menu_Loop
                 Console.Clear(); // Optional
                 Console.WriteLine("Welcome to my looped menu.  Please select an option:");
                 Console.WriteLine();
-                Console.WriteLine("1 - Menu Option 1");
-                Console.WriteLine("2 - Menu Option 2");
-                Console.WriteLine("3 - Menu Option 3");
+                Console.WriteLine("1 - Guessing number");
+                Console.WriteLine("2 - Bank Transactions");
+                Console.WriteLine("3 - Rolling doubles");
                 Console.WriteLine("...");
                 Console.WriteLine("Q - Quit");
                 Console.WriteLine();
