@@ -32,12 +32,14 @@ namespace Menu_Loop
                     int min, max;
                     Random number = new Random();
                     Console.WriteLine("Please give me a min number.");
-                    min = Convert.ToInt32(Console.ReadLine());
+                    while (!Int32.TryParse(Console.ReadLine(), out min)
+                           Console.WriteLine("Invalid integer, try again.");
                     Console.WriteLine("Please give me a max number.");
-                    max = Convert.ToInt32(Console.ReadLine());
+                    while (!Int32.TryParse(Console.ReadLine(), out max)
+                           Console.WriteLine("Invalid integer, try again.");
                     while (min > max)
                     {
-                        Console.WriteLine("That is more than you have, please enter a valid amount:");
+                        Console.WriteLine("Ththe min is greater than max, please enter a valid amount:");
                         while (!Int32.TryParse(Console.ReadLine(), out min))
                             Console.WriteLine("Invalid integer, try again.");
 
