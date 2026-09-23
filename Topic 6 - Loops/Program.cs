@@ -79,19 +79,33 @@ namespace Menu_Loop
                         Console.WriteLine("3 - Check Balance");
                         Console.WriteLine("4 - Bill Payment");
                         Console.WriteLine("5 - Exit");
-                        transaction = Convert.ToInt32(Console.ReadLine());
+                        while (!Int32.TryParse(Console.ReadLine(), out transaction))
+                        {
+                            Console.WriteLine("This is an invalid option.");
+                            Console.WriteLine("Enter a proper value.");
+                        }
                         if (transaction == 1)
                         {
+                            double deposit
                             Console.WriteLine("How much would you like to deposit?");
-                            double deposit = Convert.ToDouble(Console.ReadLine());
+                            while (!Double.TryParse(Console.ReadLine(), out deposite))
+                            {
+                            Console.WriteLine("This is an invalid input.");
+                            Console.WriteLine("Enter a proper value.");
+                            }
                             balance += deposit;
                             balance -= fee;
                             Console.WriteLine("Your new balance is: $" + balance);
                         }
                         else if (transaction == 2)
                         {
+                            double withdraw
                             Console.WriteLine("How much would you like to withdraw?");
-                            double withdraw = Convert.ToDouble(Console.ReadLine());
+                            while (!Double.TryParse(Console.ReadLine(), out withdraw))
+                            {
+                            Console.WriteLine("This is an invalid input.");
+                            Console.WriteLine("Enter a proper value.");
+                            }
                             if (withdraw > balance)
                             {
                                 Console.WriteLine("You do not have enough funds to withdraw that amount.");
@@ -109,8 +123,13 @@ namespace Menu_Loop
                         }
                         else if (transaction == 4)
                         {
+                            double billPayment
                             Console.WriteLine("How much would you like to pay towards your bill?");
-                            double billPayment = Convert.ToDouble(Console.ReadLine());
+                            while (!Double.TryParse(Console.ReadLine(), out billPayment))
+                            {
+                            Console.WriteLine("This is an invalid input.");
+                            Console.WriteLine("Enter a proper value.");
+                            }
                             if (billPayment > balance)
                             {
                                 Console.WriteLine("You do not have enough funds to pay that bill.");
